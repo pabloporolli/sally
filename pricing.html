@@ -5,9 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pricing</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
 	<div class="contenedorPricing"> <!-- Abre el contenedor -->
+
+	<script>
+	  AOS.init();
+	</script>
 
 	<!-- Menú -->
 		<nav class="botonera" id="menu">
@@ -28,7 +34,9 @@
 		</main>
 
 		<!-- Bloques de precios -->
-		<div class="bloquePrecios" id="sectorPrecios">
+		<div class="bloquePrecios" id="sectorPrecios" data-aos="fade-down"
+     	data-aos-easing="linear"
+     	data-aos-duration="1500">
 			<div class="caja" id="silver">
 			<h3>Silver</h3>
 			<table>

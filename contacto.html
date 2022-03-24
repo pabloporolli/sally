@@ -5,10 +5,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Contacto</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
 	
 	<div class="contenedorContacto"> <!-- Arranca en contenedor -->
+
+	<script>
+	  AOS.init();
+	</script>
 
 		<!-- Menú -->
 		<nav class="botonera" id="menu">
@@ -93,8 +99,14 @@
 				<!-- Botones -->
 				<div class="botones" id="buttoms">
 					<form action="" method="get">
-						<input type="submit" value="Enviar"/>
-						<input type="reset" value="Borrar"/>
+						<input type="submit" value="Enviar"data-aos="fade-left"
+     					data-aos-anchor="#example-anchor"
+     					data-aos-offset="800"
+     					data-aos-duration="500"/>
+						<input type="reset" value="Borrar"data-aos="fade-left"
+     					data-aos-anchor="#example-anchor"
+     					data-aos-offset="500"
+     					data-aos-duration="800"/>
 					</form>
 				</div>
 

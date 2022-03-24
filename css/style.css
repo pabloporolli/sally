@@ -46,11 +46,11 @@ html{
 }
 
 /* Foto principal */
-header img{
+/* header img{
 	margin: 0;
 	display: block;
 	width: 100%;
-}
+} */
 
 .articulos{
 	padding: 15px;
@@ -143,6 +143,26 @@ header img{
 	grid-area: footer;
 }
 
+/* Animation Main Foto */
+
+header{
+	height: 40vh;
+	background-image: url(../img/hotel.jpg);
+	animation-name: animateHeader;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	animation-delay: 2s;
+	animation-timing-function: ease-in-out;
+	background-size: cover;
+}
+
+@keyframes animateHeader{
+	0%{background-image: url(../img/hall.jpg)}
+	25%{background-image: url(../img/checkin.jpg)}
+	50%{background-image: url(../img/hotel.jpg)}
+	75%{background-image: url(../img/hall.jpg)}
+	100%{background-image: url(../img/checkin.jpg);}
+}
 
 /* HOME. Arranca el responsive */
 @media only screen and (min-width: 768px){
@@ -185,6 +205,10 @@ header img{
 }
 nav ul li a:hover {
 	text-decoration: underline;
+}
+
+header{
+	height: 80vh;
 }
 
 .articulos{
@@ -342,17 +366,21 @@ footer a p:hover{
 	border-radius: 10%;
 }
 
+/* Animación de bloques de precios */
+
 #silver{
-	background-color: silver;
+	background-color: #bdd4e7;
+	background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
 }
 
 #gold{
-	background-color: gold;
+	background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 }
 
 #platinum{
-	background-color: black;
-	color: white;
+	background-color: #9dc5c3;
+	background-image: linear-gradient(315deg, #9dc5c3 0%, #5e5c5c 74%);
 }
 
 .caja h3{
@@ -521,3 +549,6 @@ footer a p:hover{
 }
 
 }
+
+
+
