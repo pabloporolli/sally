@@ -11,46 +11,25 @@ html{
 }
 
 /* Botonera */
-.botonera{
-	display: flex;
-	flex-direction: column;
-	padding: 5px 2px;
-}
 
 /* Logo */
 .botonera a img{
-	width: 30%;
-}
-.botonera a{
-	display: flex;
-	justify-content: center;
+	width: 40%;
 }
 
 /* Menu */
-.botonera ul{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
 .botonera ul li{
-	list-style: none;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: 300;
 	padding: 7px;
 	font-size: 1.2rem;
-}
-.botonera ul li a{
-	text-decoration: none;
 	color: black;
 }
-
-/* Foto principal */
-/* header img{
-	margin: 0;
-	display: block;
-	width: 100%;
-} */
+#navbarNav ul li a{
+	
+	color: black;
+}
 
 .articulos{
 	padding: 15px;
@@ -203,7 +182,7 @@ header{
 .botonera ul li{
 	font-size: 2rem;
 }
-nav ul li a:hover {
+#navbarNav ul li a:hover {
 	text-decoration: underline;
 }
 
@@ -366,21 +345,25 @@ footer a p:hover{
 	border-radius: 10%;
 }
 
-/* Animación de bloques de precios */
-
-#silver{
-	background-color: #bdd4e7;
-	background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+.listaBloque{
+	padding: 3px;
+	font-size: 2rem;
+	letter-spacing: 0.2rem;
+	text-align: left;
 }
 
-#gold{
-	background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+.tituloBloque{
+	font-size: 3rem;
+	text-transform: uppercase;
+	text-align: center;
 }
 
-#platinum{
-	background-color: #9dc5c3;
-	background-image: linear-gradient(315deg, #9dc5c3 0%, #5e5c5c 74%);
+.colorYellow{
+	color: gold;
+}
+
+.colorPlatinum{
+	color: gainsboro;
 }
 
 .caja h3{
@@ -421,6 +404,11 @@ footer a p:hover{
 	
 .caja{
 	margin: 3rem;
+}
+
+main{
+	margin-top: 3rem;
+	margin-right: 3rem;
 }
 
 }
