@@ -38,7 +38,6 @@ html{
 	text-align: right;
 	line-height: 1.7rem;
 	margin-left: 1.5rem;
-	margin-bottom: 2rem;
 }
 
 /* Título articulos */
@@ -63,6 +62,7 @@ html{
 	color: white;
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 0;
 }
 .pie h3{
 	display: flex;
@@ -247,6 +247,7 @@ footer a p:hover{
 
 .pie{
 	margin-top: 3rem;
+	margin-bottom: 0;
 }
 
 /* Arranca el responsive de PROBLEMA */
@@ -263,69 +264,30 @@ footer a p:hover{
 	"fotoPrin fotoPrin fotoPrin"
 	"footer footer footer";
 }
+
 .pie{
-	margin: 0rem 0rem 10rem 0rem;
+	margin-bottom: 0;
 }
 }
 
 /* Página SOLUCION */
 
-.contenedorSolucion{
-	display: grid;
-	grid-template-columns: 100%;
-	grid-template-rows: repeat(6, auto);
-	grid-template-areas:
-	"nav"
-	"article"
-	"article2"
-	"sally"
-	"article3"
-	"footer";
-}
-
-#article2{
-	grid-area: article2;
-}
-
-#sally{
-	grid-area: sally;
-}
-
 .fotoSally img{
 	width: 100%;
 }
 
-#article3{
-	grid-area: article3;
-}
-
-.pie{
-	margin-top: 0rem;
-}
-
 /* Arranca el responsive de SOLUCION */
 @media only screen and (min-width: 768px){
+.fotoSally img{
+	width: 40%;
+	margin: 0;
+	padding: 0;
+}
+}
 
-	/* Se arman 3 columnas y 6 filas */
-	.contenedorSolucion{
-	display: grid;
-	grid-template-columns: 33% 33% 33%;
-	grid-template-rows: repeat(6, auto);
-	grid-template-areas:
-	"nav nav nav"
-	". article article"
-	". article2 article2"
-	"sally . ."
-	". article3 article3"
-	"footer footer footer";
-}
-.fotoSally{
-	width: 100%;
-}
-.pie{
-	margin: 0rem 0rem 10rem 0rem;
-}
-}
+
+/* Arranca el responsive de SOLUCION */
+
 
 /* Página PRICING */
 .bloquePrecios{
@@ -416,8 +378,7 @@ main{
 /* Página CONTACTO */
 
 .tituloConectate{
-	margin-bottom: 3rem;
-	margin-top: 3rem;
+	padding: 3rem;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -450,14 +411,10 @@ main{
 	margin-left: 1rem;
 }
 
-.contenedorContacto .botonera{
-	background-color: white;
-	color: black;
-}
-
 .contenedorContacto .pie{
 	background-color: white;
 	color: black;
+	margin-bottom: 0;
 }
 
 .contenedorContacto .pie a{
@@ -469,6 +426,16 @@ main{
 	grid-area: arriba;
 	background-color: black;
 	color: white;
+}
+
+#anchoForm{
+	width: 40%;
+	font-size: 1.4rem;
+}
+
+#anchoFormulario{
+	width: 40%;
+	font-size: 1.4rem;
 }
 
 #data{
@@ -501,14 +468,11 @@ main{
 	margin-bottom: 1.5rem;
 }
 
-.botones{
+#botones{
 	text-align: center;
-	padding: 2rem;
+	padding: 1rem 4rem 1rem 4rem;
 }
 
-.botones input{
-	padding: 1rem 2rem 1rem 2rem;
-}
 
 .ingreso_datos{
 	display: flex;
@@ -519,23 +483,12 @@ main{
 /* Arranca el responsive de CONTACTO */
 @media only screen and (min-width: 768px){
 
-	.contenedorContacto{
-	display: grid;
-	grid-template-columns: 50% 50%;
-	grid-template-rows: repeat(6, auto);
-	grid-template-areas:
-	"nav nav"
-	"arriba arriba"
-	"data servicios"
-	"sist recibirInfo"
-	"buttoms buttoms"
-	"footer footer";
+	#botones:hover{
+	transform: scale(1.1);
+	background-color: black;
+	color: white;
+	text-transform: uppercase;
 }
-
-.pie{
-	margin-bottom: 0rem;
-}
-
 }
 
 

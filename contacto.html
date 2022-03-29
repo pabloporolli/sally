@@ -47,9 +47,8 @@
       </div>
     </nav>
 
-
-	<div class="contenedorContacto"> <!-- Arranca en contenedor -->
 		
+			<!-- Foto y título -->
 			<div class="encabezado" id="arriba">
 				<h1 class="tituloConectate">Contactate con Sally y mejorá tus ventas directas</h2>
 				<div>
@@ -57,78 +56,93 @@
 				</div>
 			</div>
 
-				<!--Datos de contacto-->
-				<div class="datos" id="data">
-					<form action="" method="get">
-						<h2 class="sub">Datos de contacto</h2>
-						<div class="ingreso_datos">
-							<label for="nombre">Nombre y Apellido</label>
-							<input type="text" placeholder="Juan Gomez" name="nombre" id="nombre">
-						</div>
-						<div class="ingreso_datos">
-							<label for="email">Email</label>
-							<input type="email" placeholder="juan@gmail.com" name="email" id="email">
-						</div>
-						<div class="ingreso_datos">
-							<label for="pais">País</label>
-							<input type="text" placeholder="Argentina" name="pais" id="pais">
-						</div>
-						<div class="ingreso_datos">
-							<label for="teléfono">Teléfono</label>
-							<input type="teléfono" placeholder="+54911 3500 1000" name="telefono" id="telefono">
-						</div>
-					</form>
-				</div>
+			<!-- Formulario de contacto -->
+			<section class="py-3" id="arriba">
+				<div class="container-fluid">
+					<div class="row ms-3">
 
-				<!-- Servicio requerido -->
-				<div class="datos" id="servicios">
-					<form action="" method="get">
-					<h2 class="sub">Servicio requerido</h2>
-					<div class="radio_buttoms">
-						<legend>Silver</legend>
-						<input type="radio" name=servicio value="Silver">
-						<legend>Gold</legend>
-						<input type="radio" name=servicio value="Gold">
-						<legend>Platinum</legend>
-						<input type="radio" name=servicio value="Platinum">
+						<article class="col-md-12 py-3">
+							<h2>¿Con qué sistema cuenta acutalmente?</h2>
+							<select class="form-select" aria-label="Default select example" id="anchoForm">
+	  						<option selected>Elija una opción</option>
+	 							<option value="1">Solamente Booking Engine</option>
+							  <option value="2">Booking Engine + Channel Manager</option>
+							  <option value="3">Ninguno</option>
+							</select>
+						</article>
+
+
+							<article class="col-md-12 py-3">
+							<h2>Datos de Contacto</h2>
+							<form id="anchoFormulario">
+							  <div class="row mb-3 align-items-center">
+							    <label for="inputEmail3" class="col-sm-2 col-form-label">Nombre</label>
+							    <div class="col-sm-10">
+							      <input type="text" class="form-control" id="inputEmail3" placeholder="Juan Gomez">
+							    </div>
+							  </div>
+							  <div class="row mb-3 align-items-center">
+							    <label for="inputPassword3" class="col-sm-2 col-form-label">Email</label>
+							    <div class="col-sm-10">
+							      <input type="email" class="form-control" id="inputPassword3" placeholder="juan.gomez@gmail.com">
+							    </div>
+							  </div>
+							  <div class="row mb-3 align-items-center">
+							    <label for="inputEmail3" class="col-sm-2 col-form-label">Teléfono</label>
+							    <div class="col-sm-10">
+							      <input type="text" class="form-control" id="inputEmail3" placeholder="+ 54 9 11 87 21 78 45">
+							    </div>
+							  </div>
+							  <div class="row mb-3 align-items-center">
+							    <label for="inputEmail3" class="col-sm-2 col-form-label">País</label>
+							    <div class="col-sm-10">
+							      <input type="text" class="form-control" id="inputEmail3" placeholder="Argentina">
+							    </div>
+							  </div>
+							  <fieldset class="row mb-3">
+							    <legend class="col-form-label col-sm-2 pt-0">Servicio Requerido</legend>
+							    <div class="col-sm-10">
+							      <div class="form-check">
+							        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+							        <label class="form-check-label" for="gridRadios1">
+							          Silver
+							        </label>
+							      </div>
+							      <div class="form-check">
+							        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+							        <label class="form-check-label" for="gridRadios2">
+							          Gold
+							        </label>
+							      </div>
+							      <div class="form-check">
+							       <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option2">
+							       <label class="form-check-label" for="gridRadios3">
+							         Platinum
+							       </label>
+							     </div>
+							    </div>
+							  </fieldset>
+							  <div class="row mb-3">
+							    <div class="col-sm-10 offset-sm-2">
+							      <div class="form-check">
+							        <input class="form-check-input" type="checkbox" id="gridCheck1">
+							        <label class="form-check-label" for="gridCheck1">
+							          Recibir información adicional
+							        </label>
+							      </div>
+							    </div>
+							  </div>
+							  <button type="submit" class="btn btn-outline-light btn-lg mt-2" id="botones">Enviar</button>
+							</form>
+						</article>
+	
+
 					</div>
-					</form>
 				</div>
 
-				<!-- ¿Con qué sistema cuenta? -->
-				<div class="datos" id="sist">
-					<form action="" method="get">
-						<h2 class="sub2">¿Con qué sistema cuenta actualmente?</h2>
-						<select name="sistema" id="sistema">
-							<option value="blank">Elegir una opción</option>
-							<option value="be">Solamente con un Booking Engine</option>
-							<option value="ch">Booking Engine + Channel Manager</option>
-							<option value="nada">No cuento con ningún sistema</option>
-						</select>
-					</form>
-				</div>
+			</section>
 
-				<!-- Recibir info -->
-				<div class="datos" id="recibirInfo">
-					<form action="" method="get">
-						<h2 class="sub">Acepta recibir información de Sally</h2>
-						<input type="checkbox" name="acepta" value="1"/>
-					</form>
-				</div>
-
-				<!-- Botones -->
-				<div class="botones" id="buttoms">
-					<form action="" method="get">
-						<input type="submit" value="Enviar"data-aos="fade-left"
-     					data-aos-anchor="#example-anchor"
-     					data-aos-offset="800"
-     					data-aos-duration="500"/>
-						<input type="reset" value="Borrar"data-aos="fade-left"
-     					data-aos-anchor="#example-anchor"
-     					data-aos-offset="500"
-     					data-aos-duration="800"/>
-					</form>
-				</div>
+	<div class="contenedorContacto"> <!-- Arranca en contenedor -->
 
 		<!-- Footer -->
 		<footer class="pie" id="footer">

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contacto</title>
+
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<!-- Botonera -->
+     <nav class="navbar navbar-expand-lg navbar-light botonera">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo/logo.png" alt="Logo Sally sold seven suites">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- acá se pueden mover los botones -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="problema.html">El Problema</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="solucion.html">La Solución</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+	<div class="contenedorContacto"> <!-- Arranca en contenedor -->
+		
+			<div class="encabezado" id="arriba">
+				<h1 class="tituloConectate">Contactate con Sally y mejorá tus ventas directas</h2>
+				<div>
+					<img src="img/hab.jpg" alt="Foto habitacion" width="100%">
+				</div>
+			</div>
+
+				<!--Datos de contacto-->
+				<div class="datos" id="data">
+					<form action="" method="get">
+						<h2 class="sub">Datos de contacto</h2>
+						<div class="ingreso_datos">
+							<label for="nombre">Nombre y Apellido</label>
+							<input type="text" placeholder="Juan Gomez" name="nombre" id="nombre">
+						</div>
+						<div class="ingreso_datos">
+							<label for="email">Email</label>
+							<input type="email" placeholder="juan@gmail.com" name="email" id="email">
+						</div>
+						<div class="ingreso_datos">
+							<label for="pais">País</label>
+							<input type="text" placeholder="Argentina" name="pais" id="pais">
+						</div>
+						<div class="ingreso_datos">
+							<label for="teléfono">Teléfono</label>
+							<input type="teléfono" placeholder="+54911 3500 1000" name="telefono" id="telefono">
+						</div>
+					</form>
+				</div>
+
+				<!-- Servicio requerido -->
+				<div class="datos" id="servicios">
+					<form action="" method="get">
+					<h2 class="sub">Servicio requerido</h2>
+					<div class="radio_buttoms">
+						<legend>Silver</legend>
+						<input type="radio" name=servicio value="Silver">
+						<legend>Gold</legend>
+						<input type="radio" name=servicio value="Gold">
+						<legend>Platinum</legend>
+						<input type="radio" name=servicio value="Platinum">
+					</div>
+					</form>
+				</div>
+
+				<!-- ¿Con qué sistema cuenta? -->
+				<div class="datos" id="sist">
+					<form action="" method="get">
+						<h2 class="sub2">¿Con qué sistema cuenta actualmente?</h2>
+						<select name="sistema" id="sistema">
+							<option value="blank">Elegir una opción</option>
+							<option value="be">Solamente con un Booking Engine</option>
+							<option value="ch">Booking Engine + Channel Manager</option>
+							<option value="nada">No cuento con ningún sistema</option>
+						</select>
+					</form>
+				</div>
+
+				<!-- Recibir info -->
+				<div class="datos" id="recibirInfo">
+					<form action="" method="get">
+						<h2 class="sub">Acepta recibir información de Sally</h2>
+						<input type="checkbox" name="acepta" value="1"/>
+					</form>
+				</div>
+
+				<!-- Botones -->
+				<div class="botones" id="buttoms">
+					<form action="" method="get">
+						<input type="submit" value="Enviar"data-aos="fade-left"
+     					data-aos-anchor="#example-anchor"
+     					data-aos-offset="800"
+     					data-aos-duration="500"/>
+						<input type="reset" value="Borrar"data-aos="fade-left"
+     					data-aos-anchor="#example-anchor"
+     					data-aos-offset="500"
+     					data-aos-duration="800"/>
+					</form>
+				</div>
+
+		<!-- Footer -->
+		<footer class="pie" id="footer">
+			<h3>Contactanos a: info@sally.com</h3>
+			<div class="redes" id="social">
+				<a href="https://facebook.com" target="_blanc">
+					<p>Facebook</p>
+				</a>
+				<a href="https://instagram.com" target="_blanc">
+					<p>Instagram</p>
+				</a>
+				<a href="https://twitter.com" target="_blanc">
+					<p>Twitter</p>
+				</a>
+			</div>
+		</footer>
+
+	</div> <!-- Cierra el contenedor -->
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
