@@ -44,7 +44,13 @@ html{
 .titulo{
 	line-height: 5rem;
 	text-transform: uppercase;
-	font-weight: 600;
+}
+
+/* Zona video */
+.video{
+	display: flex;
+	justify-content: center;
+	align-content: center;
 }
 
 /* Footer */
@@ -78,24 +84,80 @@ html{
 	justify-content: space-evenly;
 }
 
-/* HOME */
+/* HOME. Se define el contenedor como grid (aunque haya sólo una columna). La idea es hacer el ejercicio. */
+.contenedor{
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: repeat(6, auto);
+	grid-template-areas:
+	"nav"
+	"header"
+	"article"
+	"zonaVideo"
+	"apartado"
+	"footer";
+}
+
+#menu{
+	grid-area: nav;
+}
+
+#header{
+	grid-area: header;
+}
+
+#article{
+	grid-area: article;
+}
+
+#zonaVideo{
+	grid-area: zonaVideo;
+}
 
 #apartado{
 	grid-area: apartado;
-	margin-top: 0;
 }
 
 #footer{
 	grid-area: footer;
 }
 
-.video{
-	display: flex;
-	justify-content: center;
+/* Animation Main Foto */
+
+header{
+	height: 40vh;
+	background-image: url(../img/hotel.jpg);
+	animation-name: animateHeader;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	animation-delay: 2s;
+	animation-timing-function: ease-in-out;
+	background-size: cover;
 }
 
-/* Arranca el responsive */
+@keyframes animateHeader{
+	0%{background-image: url(../img/hall.jpg)}
+	25%{background-image: url(../img/checkin.jpg)}
+	50%{background-image: url(../img/hotel.jpg)}
+	75%{background-image: url(../img/hall.jpg)}
+	100%{background-image: url(../img/checkin.jpg);}
+}
+
+/* HOME. Arranca el responsive */
 @media only screen and (min-width: 768px){
+
+	/* Se arman las dos columnas en 5 filas */
+	.contenedor{
+	display: grid;
+	grid-template-columns: 30% 30% 40%;
+	grid-template-rows: repeat(5, auto);
+	grid-template-areas:
+	"nav nav nav"
+	"header header header"
+	". article article"
+	"zonaVideo zonaVideo apartado"
+	"footer footer footer";
+}
 
 /* Cambios en la nav */
 .botonera{
@@ -138,6 +200,7 @@ header{
 
 .video iframe{
 	width: 80%;
+	margin-bottom: 3rem;
 }
 
 /* Footer */
@@ -158,6 +221,7 @@ footer a p:hover{
 	text-decoration: underline;
 
 }
+
 }
 
 /* Página PROBLEMA */
@@ -171,10 +235,6 @@ footer a p:hover{
 	"article"
 	"fotoPrin"
 	"footer";
-}
-
-#article{
-	grid-area: article;
 }
 
 #fotoPrin{
@@ -210,27 +270,41 @@ footer a p:hover{
 }
 }
 
-
 /* Página SOLUCION */
 
 .fotoSally img{
 	width: 100%;
 }
 
-.articulos p strong{
-	text-decoration: none;
-	font-weight: inherit;
-	text-decoration: underline;
+/* Arranca el responsive de SOLUCION */
+@media only screen and (min-width: 768px){
+.fotoSally img{
+	width: 40%;
+	margin: 0;
+	padding: 0;
+}
 }
 
 
-/* Página PRICING */
+/* Arranca el responsive de SOLUCION */
 
+
+/* Página PRICING */
 .bloquePrecios{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+.caja{
+	display: flex;
+	flex-direction: column;
+	width: 70vw;
+	margin-bottom: 5rem;
+	height: 50vh;
+	justify-content: center;
+	border-radius: 10%;
 }
 
 .listaBloque{
@@ -254,6 +328,52 @@ footer a p:hover{
 	color: gainsboro;
 }
 
+.caja h3{
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
+	font-size: 2.7rem;
+}
+
+
+.caja h3, .caja table{
+	padding: 1.3rem;
+}
+
+.caja table tr{
+	display: flex;
+	height: 5rem;
+	font-size: 2.4rem;
+	width: 100%;
+}
+
+.ancho{
+	display: flex;
+	width: 70%;
+}
+
+.respuesta{
+	text-align: center;
+	width: 30%;
+}
+
+/* Arranca el responsive de PRICING */
+@media only screen and (min-width: 768px){
+
+.bloquePrecios{
+	flex-direction: row;
+}
+	
+.caja{
+	margin: 3rem;
+}
+
+main{
+	margin-top: 3rem;
+	margin-right: 3rem;
+}
+
+}
 
 /* Página CONTACTO */
 
@@ -352,6 +472,7 @@ footer a p:hover{
 	text-align: center;
 	padding: 1rem 4rem 1rem 4rem;
 }
+
 
 .ingreso_datos{
 	display: flex;
