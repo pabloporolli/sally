@@ -1,0 +1,77 @@
+.tituloConectate{
+	padding: 3rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+.radio_buttoms{
+	@include flex(flex-start);
+	flex-direction: row;
+}
+
+.radio_buttoms input{
+	margin-right: 2rem;
+	margin-left: 1rem;
+}
+
+.contenedorContacto .pie{
+	background-color: white;
+	color: black;
+	margin-bottom: 0;
+	margin-top: 0;
+	
+	a{
+	background-color: white;
+	color: black;
+	}
+}
+
+#arriba{
+	@include fondoNegro();
+}
+
+#block{
+	@include fondoNegro();
+}
+
+#anchoForm{
+	width: 40%;
+	font-size: 1.4rem;
+}
+
+#anchoFormulario{
+	width: 40%;
+	font-size: 1.4rem;
+}
+
+.datos{
+	margin-left: 3rem;
+	margin: 1rem 3rem 1rem 3rem;
+	font-size: 1.5rem;
+	
+	h2{
+	margin-bottom: 1.5rem;
+	}
+}
+
+#botones{
+	text-align: center;
+	padding: 1rem 4rem 1rem 4rem;
+}
+
+.ingreso_datos{
+	@include flex(space-between);
+	margin-right: 10rem;
+}
+
+/* Arranca el responsive de CONTACTO */
+@media only screen and (min-width: 768px){
+
+	#botones:hover{
+	transform: scale(1.1);
+	background-color: black;
+	color: white;
+	text-transform: uppercase;
+}
+}

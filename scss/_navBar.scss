@@ -1,0 +1,50 @@
+/* Logo */
+.botonera a img{
+	width: 40%;
+}
+
+/* Menu */
+.botonera ul li{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 300;
+	padding: 7px;
+	font-size: 1.2rem;
+	color: black;
+}
+#navbarNav ul li a{
+	color: black;
+}
+
+/* Arranca el responsive */
+@media only screen and (min-width: 768px){
+
+/* Cambios en la nav */
+.botonera{
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	a{
+		justify-content: flex-start;
+	}
+
+		img{
+			width: 70%;
+			margin-left: 3rem;
+		}
+	}
+
+/* Menú */
+.botonera ul{
+	margin: 2rem;
+	
+	li{
+		font-size: 2rem;
+	}
+}
+
+#navbarNav ul li a:hover{
+	text-decoration: underline;
+}
+}

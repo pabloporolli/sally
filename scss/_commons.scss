@@ -1,0 +1,30 @@
+// Reset
+
+*{
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+
+// Mixins
+
+@mixin fondoNegro(){
+	background-color: black;
+	color: white;
+}
+
+@mixin flex($justify){
+	display: flex;
+	justify-content: $justify;
+}
+
+// Variables
+
+$mainColor: black;
+$secondColor: gold;
+$thirdColor: gainsboro;

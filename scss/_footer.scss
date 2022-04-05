@@ -1,0 +1,58 @@
+.pie{
+	background-color: black;
+	text-transform: uppercase;
+	font-size: map-get($map: $sizes, $key: 's');
+	text-decoration: none;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 0;
+
+	h3{
+	display: flex;
+	justify-content: center;
+	font-size: map-get($map: $sizes, $key: 's');
+	text-decoration: none;
+	margin: 0.8rem;
+	}
+}
+
+
+.redes{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+
+	a{
+	text-transform: uppercase;
+	font-size: map-get($map: $sizes, $key: 's');
+	text-decoration: none;
+	color: white;
+	margin-bottom: 0.8rem;
+	}
+}
+
+
+/* Arranca el responsive */
+@media only screen and (min-width: 768px){
+.pie{
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	h3{
+	margin: 1rem 0rem 1rem 5rem;
+	font-size: map-get($map: $sizes, $key: 'm');
+	}
+}
+
+.redes a{
+	margin: 1rem 5rem 1rem 5rem;
+	font-size: map-get($map: $sizes, $key: 'm');
+}
+
+footer a p:hover{
+	text-decoration: underline;
+}
+
+}

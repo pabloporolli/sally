@@ -1,0 +1,152 @@
+// Elementos comunes a todas la páginas
+
+.articulos{
+	padding: 15px;
+	font-size: map-get($map: $sizes, $key: 'ms');
+	letter-spacing: 0.2rem;
+	text-align: right;
+	line-height: 1.7rem;
+	margin-left: 1.5rem;
+}
+
+.titulo{
+	line-height: 5rem;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.botonera a img{
+	width: 50%;
+}
+
+// HOME
+
+.video{
+	@include flex(center);
+}
+
+@media only screen and (min-width: 768px){
+.articulos{
+	padding: 15px;
+	font-size: map-get($map: $sizes, $key: 'l');
+	text-align: right;
+	line-height: 2.5rem;
+	margin-left: 5rem;
+}
+.video iframe{
+	width: 80%;
+}
+}
+
+
+// EL PROBLEMA
+
+.contenedorProblema{
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas:
+	"nav"
+	"article"
+	"fotoPrin"
+	"footer";
+}
+
+#article{
+	grid-area: article;
+}
+
+#fotoPrin{
+	grid-area: fotoPrin;
+}
+
+.fotoPrincipal img{
+	width: 100%;
+}
+
+.pie{
+	margin-top: 3rem;
+	margin-bottom: 0;
+}
+
+#footer{
+	grid-area: footer;
+}
+
+/* Arranca el responsive de PROBLEMA */
+@media only screen and (min-width: 768px){
+
+	/* Se arman las dos columnas en 4 filas */
+	.contenedorProblema{
+	display: grid;
+	grid-template-columns: 30% 30% 40%;
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas:
+	"nav nav nav"
+	". article article"
+	"fotoPrin fotoPrin fotoPrin"
+	"footer footer footer";
+}
+
+.pie{
+	margin-bottom: 0;
+}
+}
+
+
+// LA SOLUCION
+
+.fotoSally img{
+	width: 100%;
+}
+
+.articulos p strong{
+	text-decoration: none;
+	font-weight: inherit;
+	text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px){
+.fotoSally img{
+	width: 40%;
+}
+}
+
+
+// PRICING
+
+.bloquePrecios{
+	@include flex(center);
+	flex-direction: column;
+	align-items: center;
+}
+
+.listaBloque{
+	padding: 3px;
+	font-size: map-get($map: $sizes, $key: 'l');
+	letter-spacing: 0.2rem;
+	text-align: left;
+}
+
+.tituloBloque{
+	font-size: map-get($map: $sizes, $key: 'xl');
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.colorYellow{
+	color: $secondColor;
+}
+
+.colorPlatinum{
+	color: $thirdColor;
+}
+
+#articuloPrecio p strong{
+	text-decoration: none;
+	color: $secondColor;
+}
+
+
+
+
