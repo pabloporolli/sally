@@ -129,9 +129,8 @@
 }
 
 .tituloBloque{
+	@extend .title;
 	font-size: map-get($map: $sizes, $key: 'xl');
-	text-transform: uppercase;
-	text-align: center;
 }
 
 .colorYellow{

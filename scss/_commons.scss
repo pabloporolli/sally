@@ -27,3 +27,11 @@ html{
 $mainColor: black;
 $secondColor: gold;
 $thirdColor: gainsboro;
+
+
+// Extend
+
+.title{
+	text-align: center;
+	text-transform: uppercase;	
+}

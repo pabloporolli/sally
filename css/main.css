@@ -8,6 +8,10 @@
 html {
   font-size: 62.5%; }
 
+.title, .tituloBloque, .tituloConectate {
+  text-align: center;
+  text-transform: uppercase; }
+
 /* Logo */
 .botonera a img {
   width: 40%; }
@@ -174,9 +178,7 @@ html {
   text-align: left; }
 
 .tituloBloque {
-  font-size: 3rem;
-  text-transform: uppercase;
-  text-align: center; }
+  font-size: 3rem; }
 
 .colorYellow {
   color: gold; }
@@ -189,9 +191,7 @@ html {
   color: gold; }
 
 .tituloConectate {
-  padding: 3rem;
-  text-align: center;
-  text-transform: uppercase; }
+  padding: 3rem; }
 
 .radio_buttoms {
   display: flex;
