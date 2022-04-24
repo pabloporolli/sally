@@ -13,8 +13,15 @@ html {
   text-transform: uppercase; }
 
 /* Logo */
-.botonera a img {
-  width: 40%; }
+@media only screen and (max-width: 420px) {
+  .botonera div a {
+    width: 40%; }
+    .botonera div a img {
+      width: 100%; } }
+
+@media (min-width: 420px) and (max-width: 768px) {
+  .botonera div a img {
+    width: 50%; } }
 
 /* Menu */
 .botonera ul li {
@@ -28,7 +35,6 @@ html {
 #navbarNav ul li a {
   color: black; }
 
-/* Arranca el responsive */
 @media only screen and (min-width: 768px) {
   /* Cambios en la nav */
   .botonera {
@@ -37,9 +43,9 @@ html {
     justify-content: space-between; }
     .botonera a {
       justify-content: flex-start; }
-    .botonera img {
-      width: 70%;
-      margin-left: 3rem; }
+  .logo img {
+    width: 70%;
+    margin-left: 3rem; }
   /* Menú */
   .botonera ul {
     margin: 2rem; }
@@ -94,7 +100,7 @@ html {
   padding: 15px;
   font-size: 1.2rem;
   letter-spacing: 0.2rem;
-  text-align: right;
+  text-align: left;
   line-height: 1.7rem;
   margin-left: 1.5rem; }
 
@@ -103,22 +109,17 @@ html {
   text-transform: uppercase;
   font-weight: 600; }
 
-.botonera a img {
-  width: 50%; }
-
 .video {
   display: flex;
   justify-content: center; }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1080px) {
   .articulos {
     padding: 15px;
     font-size: 2rem;
     text-align: right;
     line-height: 2.5rem;
-    margin-left: 5rem; }
-  .video iframe {
-    width: 80%; } }
+    margin-left: 5rem; } }
 
 .contenedorProblema {
   display: grid;
@@ -161,15 +162,49 @@ html {
   font-weight: inherit;
   text-decoration: underline; }
 
+@keyframes anima {
+  from {
+    color: black; }
+  to {
+    color: #E6D502; } }
+
+@keyframes anima2 {
+  from {
+    color: black; }
+  to {
+    color: #B5C7C7; } }
+
+@keyframes anima3 {
+  from {
+    color: #B5C7C7; }
+  to {
+    color: black; } }
+
+#titulito {
+  animation-name: anima;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; }
+
 @media only screen and (min-width: 768px) {
   .fotoSally img {
-    width: 40%; } }
+    width: 40%; }
+  .listaQueHacemos li:nth-child(odd) {
+    animation-name: anima2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; }
+  .listaQueHacemos li:nth-child(even) {
+    animation-name: anima3;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; }
+  .listaQueHacemos li {
+    list-style: none;
+    line-height: 4rem; } }
 
-.bloquePrecios {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center; }
+.redondo {
+  border-radius: 5%; }
 
 .listaBloque {
   padding: 3px;
@@ -191,7 +226,8 @@ html {
   color: gold; }
 
 .tituloConectate {
-  padding: 3rem; }
+  padding: 3rem;
+  font-size: 3rem; }
 
 .radio_buttoms {
   display: flex;
@@ -220,23 +256,29 @@ html {
   color: white; }
 
 #anchoForm {
-  width: 40%;
-  font-size: 1.4rem; }
+  font-size: 2rem; }
 
 #anchoFormulario {
-  width: 40%;
-  font-size: 1.4rem; }
+  font-size: 2rem; }
 
-.datos {
-  margin-left: 3rem;
-  margin: 1rem 3rem 1rem 3rem;
-  font-size: 1.5rem; }
-  .datos h2 {
-    margin-bottom: 1.5rem; }
+.titulo2 {
+  font-size: 2.5rem; }
+
+.inputForm {
+  font-size: 2.5rem; }
+
+.place {
+  font-size: 2rem; }
+
+.ubicacionBoton {
+  display: flex;
+  justify-content: center;
+  align-content: center; }
 
 #botones {
   text-align: center;
-  padding: 1rem 4rem 1rem 4rem; }
+  padding: 1rem 4rem 1rem 4rem;
+  font-size: 2rem; }
 
 .ingreso_datos {
   display: flex;
@@ -244,9 +286,78 @@ html {
   margin-right: 10rem; }
 
 /* Arranca el responsive de CONTACTO */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 580px) {
   #botones:hover {
     transform: scale(1.1);
     background-color: black;
     color: white;
-    text-transform: uppercase; } }
+    text-transform: uppercase; }
+  #anchoForm {
+    font-size: 1.5rem; }
+  #anchoFormulario {
+    font-size: 1.5rem; }
+  .titulo2 {
+    font-size: 2rem; }
+  .inputForm {
+    font-size: 2rem; }
+  .place {
+    font-size: 1.5rem; }
+  #botones {
+    font-size: 1.5rem; } }
+
+@media only screen and (min-width: 900px) {
+  #anchoForm {
+    width: 60%; }
+  #anchoFormulario {
+    width: 60%; }
+  .ubicacionBoton {
+    justify-content: flex-start; } }
+
+@media only screen and (min-width: 1200px) {
+  #anchoForm {
+    font-size: 2rem; }
+  #anchoFormulario {
+    font-size: 2rem; }
+  .titulo2 {
+    font-size: 2.5rem; }
+  .inputForm {
+    font-size: 2.5rem; }
+  .place {
+    font-size: 2rem; }
+  #botones {
+    font-size: 2rem; } }
+
+@media only screen and (max-width: 340px) {
+  .place {
+    font-size: 2rem; } }
+
+@media (max-width: 1023px) {
+  .marco {
+    display: none; }
+  .alternativaResp {
+    background: url("../404/payaso.jpg") center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; }
+    .alternativaResp h1, .alternativaResp h2 {
+      color: black;
+      text-transform: uppercase; }
+    .alternativaResp h1 {
+      display: flex;
+      justify-content: center;
+      padding-top: 10%; }
+    .alternativaResp a {
+      text-decoration: none; }
+    .alternativaResp h2 {
+      display: flex;
+      justify-content: center; } }
+
+@media (min-width: 1024px) {
+  .slide404 h5 {
+    font-size: 7rem; }
+  .slide404 p {
+    font-size: 3rem; }
+  .slide404 {
+    transition-delay: 1ms; }
+  .alternativaResp {
+    display: none; } }

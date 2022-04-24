@@ -1,7 +1,20 @@
 /* Logo */
-.botonera a img{
+
+@media only screen and (max-width: 420px){
+.botonera div a{
 	width: 40%;
+	img{
+		width: 100%;
+	}
 }
+}
+
+@media (min-width: 420px) and (max-width: 768px){
+.botonera div a img{
+	width: 50%;
+}
+}
+
 
 /* Menu */
 .botonera ul li{
@@ -16,7 +29,7 @@
 	color: black;
 }
 
-/* Arranca el responsive */
+
 @media only screen and (min-width: 768px){
 
 /* Cambios en la nav */
@@ -28,12 +41,12 @@
 	a{
 		justify-content: flex-start;
 	}
+}
 
-		img{
-			width: 70%;
-			margin-left: 3rem;
-		}
-	}
+.logo img{
+	width: 70%;
+	margin-left: 3rem;
+}
 
 /* Menú */
 .botonera ul{

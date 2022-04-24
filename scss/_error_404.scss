@@ -1,0 +1,51 @@
+@media (max-width: 1023px){
+.marco{
+    display: none;
+}
+.alternativaResp{
+    background: url("../404/payaso.jpg") center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    h1, h2{
+        color: black;
+        text-transform: uppercase;
+    }
+
+    h1{
+        display: flex;
+        justify-content: center;
+        padding-top: 10%;
+          
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    h2{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+}
+
+@media (min-width: 1024px){
+.slide404 h5{
+    font-size: map-get($map: $sizes, $key: 'xxl');
+}
+
+.slide404 p{
+        font-size: map-get($map: $sizes, $key: 'xl');
+    }
+
+.slide404{
+    transition-delay: 1ms;
+}
+
+.alternativaResp{
+    display: none;
+}
+}

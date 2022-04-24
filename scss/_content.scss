@@ -4,7 +4,7 @@
 	padding: 15px;
 	font-size: map-get($map: $sizes, $key: 'ms');
 	letter-spacing: 0.2rem;
-	text-align: right;
+	text-align: left;
 	line-height: 1.7rem;
 	margin-left: 1.5rem;
 }
@@ -15,26 +15,19 @@
 	font-weight: 600;
 }
 
-.botonera a img{
-	width: 50%;
-}
-
 // HOME
 
 .video{
 	@include flex(center);
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 1080px){
 .articulos{
 	padding: 15px;
 	font-size: map-get($map: $sizes, $key: 'l');
 	text-align: right;
 	line-height: 2.5rem;
 	margin-left: 5rem;
-}
-.video iframe{
-	width: 80%;
 }
 }
 
@@ -106,19 +99,59 @@
 	text-decoration: underline;
 }
 
+@keyframes anima{
+	from{color: black;}
+	to{color: #E6D502;}
+}
+
+@keyframes anima2{
+	from{color: black;}
+	to{color: #B5C7C7;}
+}
+
+@keyframes anima3{
+	from{color: #B5C7C7;}
+	to{color: black;}
+}
+
+#titulito{
+	animation-name: anima;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	}
+
 @media only screen and (min-width: 768px){
 .fotoSally img{
 	width: 40%;
 }
+
+.listaQueHacemos{
+	li:nth-child(odd){
+		animation-name: anima2;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+	}
+	li:nth-child(even){
+		animation-name: anima3;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+	}
+	li{
+		list-style: none;
+		line-height: 4rem;	
+	}
 }
+}
+
 
 
 // PRICING
 
-.bloquePrecios{
-	@include flex(center);
-	flex-direction: column;
-	align-items: center;
+.redondo{
+	border-radius: 5%;
 }
 
 .listaBloque{

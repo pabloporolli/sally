@@ -1,8 +1,8 @@
 .tituloConectate{
 	@extend .title;
 	padding: 3rem;
+	font-size: map-get($map: $sizes, $key: 'xl');
 }
-
 
 .radio_buttoms{
 	@include flex(flex-start);
@@ -35,28 +35,34 @@
 }
 
 #anchoForm{
-	width: 40%;
-	font-size: 1.4rem;
+	font-size: map-get($map: $sizes, $key: 'l');
 }
 
 #anchoFormulario{
-	width: 40%;
-	font-size: 1.4rem;
+	font-size: map-get($map: $sizes, $key: 'l');
 }
 
-.datos{
-	margin-left: 3rem;
-	margin: 1rem 3rem 1rem 3rem;
-	font-size: 1.5rem;
-	
-	h2{
-	margin-bottom: 1.5rem;
-	}
+.titulo2{
+	font-size: map-get($map: $sizes, $key: 'lx');
+}
+
+.inputForm{
+	font-size: map-get($map: $sizes, $key: 'lx');
+}
+
+.place{
+	font-size: map-get($map: $sizes, $key: 'l');
+}
+
+.ubicacionBoton{
+	@include flex(center);
+	align-content: center;
 }
 
 #botones{
 	text-align: center;
 	padding: 1rem 4rem 1rem 4rem;
+	font-size: map-get($map: $sizes, $key: 'l');
 }
 
 .ingreso_datos{
@@ -65,7 +71,7 @@
 }
 
 /* Arranca el responsive de CONTACTO */
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 580px){
 
 	#botones:hover{
 	transform: scale(1.1);
@@ -73,4 +79,78 @@
 	color: white;
 	text-transform: uppercase;
 }
+
+#anchoForm{
+	font-size: map-get($map: $sizes, $key: 'lm');
 }
+
+#anchoFormulario{
+	font-size: map-get($map: $sizes, $key: 'lm');
+}
+
+.titulo2{
+	font-size: map-get($map: $sizes, $key: 'l');
+}
+
+.inputForm{
+	font-size: map-get($map: $sizes, $key: 'l');
+}
+
+.place{
+	font-size: map-get($map: $sizes, $key: 'lm');
+}
+
+#botones{
+	font-size: map-get($map: $sizes, $key: 'lm');
+}
+
+}
+
+@media only screen and (min-width: 900px){
+
+	#anchoForm{
+		width: 60%;
+	}
+	
+	#anchoFormulario{
+		width: 60%;
+	}
+
+	.ubicacionBoton{
+		justify-content: flex-start;
+}
+}
+
+@media only screen and (min-width:1200px){
+	#anchoForm{
+		font-size: map-get($map: $sizes, $key: 'l');
+	}
+	
+	#anchoFormulario{
+		font-size: map-get($map: $sizes, $key: 'l');
+	}
+	
+	.titulo2{
+		font-size: map-get($map: $sizes, $key: 'lx');
+	}
+	
+	.inputForm{
+		font-size: map-get($map: $sizes, $key: 'lx');
+	}
+	
+	.place{
+		font-size: map-get($map: $sizes, $key: 'l');
+	}
+	
+	#botones{
+		font-size: map-get($map: $sizes, $key: 'l');
+	}
+}
+
+	@media only screen and (max-width: 340px){
+.place{
+	font-size: map-get($map: $sizes, $key: 'l');
+}
+}
+
+
